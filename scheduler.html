@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+<BR>
+<label>alarme:</label><input type="text" id="txtAlarme" value="30" style="width:30"/><label>minutos</label>
+<BR>
+<label>intervalo:</label><input type="text" id="txtIntervalo" value="2" style="width:30"/><label>minutos</label>
+<BR>
+<input type="button" id="iniciar" value="iniciar" />
+<input type="button" id="intervalo" value="intervalo" />
+<input type="button" id="parar" value="parar" />
+<BR>
+<p id="status" style="color:green">rodando</p>
+
+<input class="label" type="text" value="decorrido:"/>
+<input class="display" type="text" id="temporal" readonly value="0"/> segundos
+<BR>
+<input class="label" type="text" value="decorrido:"/>
+<input class="display" type="text" id="minutos" readonly value="0"/> minutos
+<BR>
+<input class="label" type="text" value="restantes:"/>
+<input class="display" type="text" id="restantes" readonly value="0"/> minutos
+</body>
+
+<style>
+.label{
+	border:0; width:60; text-align:left
+}
+.display{
+	border:0; width:30; text-align:right
+}
+</style>
+<script src="scheduler.js"></script>

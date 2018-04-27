@@ -1,0 +1,12 @@
+{
+  "name": "Chrome-Scheduler",
+  "description": "Chrome Scheduler App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "scheduler-ico-16.png", "128": "scheduler-128.png" }
+}
