@@ -31,18 +31,20 @@ function play(){
 	}
 	var audio = new Audio(sound);
 	audio.play();
-	document.getElementById("temporal").value = 0;
-	document.getElementById("minutos").value = 0;
-	document.getElementById("restantes").value = document.getElementById("txtAlarme").value;
+	for(i=0; i<Timers.length; i++){
+		clearInterval(Timers[i]);
+	}	
 	if(document.getElementById("status").innerText=="rodando"){
-		var t1 = setInterval(play, 5000);
+		var t1 = setInterval(play, 3000);
 		Timers.push(t1);
 	}
 }
 function parar(){
 	document.getElementById("status").innerText = "parado";
 	document.getElementById("status").style.color = "red"
+	document.getElementById("minutos").value = 0;
 	document.getElementById("temporal").value = 0;
+	document.getElementById("restantes").value = 0;
 	for(i=0; i<Timers.length; i++){
 		clearInterval(Timers[i]);
 	}

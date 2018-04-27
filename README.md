@@ -1,4 +1,5 @@
 
+### Google Chrome - Alarm
 
 scheduler application, written in javascript.  
 this application can have a own window, shortcuts, icons and can be showed in task bar like other standalone applications.  
