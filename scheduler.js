@@ -33,11 +33,15 @@ function play(){
 	audio.play();
 	for(i=0; i<Timers.length; i++){
 		clearInterval(Timers[i]);
-	}	
-	if(document.getElementById("status").innerText=="rodando"){
-		var t1 = setInterval(play, 3000);
-		Timers.push(t1);
 	}
+	var i = 0;
+	if(document.getElementById("status").innerText=="rodando"){
+		i = 3000;
+	} else {
+		i = 10000;
+	}
+	var t1 = setInterval(play, i);
+	Timers.push(t1);
 }
 function parar(){
 	document.getElementById("status").innerText = "parado";
