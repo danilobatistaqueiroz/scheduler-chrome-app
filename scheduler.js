@@ -30,13 +30,14 @@ function play(){
 		sound = 'logon.wav';
 	}
 	var audio = new Audio(sound);
+  audio.volume = (parseFloat(document.getElementById("txtVolume").value)/100.00);
 	audio.play();
 	for(i=0; i<Timers.length; i++){
 		clearInterval(Timers[i]);
 	}
 	var i = 0;
 	if(document.getElementById("status").innerText=="rodando"){
-		i = 3000;
+		i = 10000;
 	} else {
 		i = 10000;
 	}
